@@ -1,55 +1,17 @@
 .App {
   text-align: center;
-}
-
-.frontCard {
-  .row{
-    // margin: 0px;
-  }
-  width: 40%;
-  margin: auto;
-  border: solid purple;
-  padding: 2%;  
-  .flipButtonFront{
-    text-align: end;
-    margin-top: 2%;
-  .editButton {
-    color: white;
-    background-color: cadetblue;
-    border: initial;
-    font-size: 16px;
-    padding: 1% 4%;
-    float: inherit;
-  }
-}
-}
-.col-sm-6 {
-  border: solid 1px;
-} 
-.backCard {
-  width: 40%;
-  margin: auto;
-  border: solid purple;
-  padding: 2%;
-  .formSubmit{
-    color: white;
-    background-color: green;
-    border: initial;
-    font-size: 16px;
-    padding: 1% 5%;
-    margin: 1% -2%;
-  }
-  .errors{
-    text-align: initial;
-    color: red;
-    font-size: 12px;
-    font-style: italic;
-  }
-
-  .flipButtonBack{
-    text-align: end;
-    margin-top: 2%;
-    .backButton {
+  .frontCard {
+    .row{
+      margin: 0px;
+    }
+    width: 40%;
+    margin: auto;
+    border: solid purple;
+    padding: 2%;  
+    .flipButtonFront{
+      text-align: end;
+      margin-top: 2%;
+    .editButton {
       color: white;
       background-color: cadetblue;
       border: initial;
@@ -58,8 +20,47 @@
       float: inherit;
     }
   }
+  }
+  .col-sm-6 {
+    border: solid 1px;
+  } 
+  .backCard {
+    width: 40%;
+    margin: auto;
+    border: solid purple;
+    padding: 2%;
+    .formSubmit{
+      color: white;
+      background-color: green;
+      border: initial;
+      font-size: 16px;
+      padding: 1% 5%;
+      margin: 1% -2%;
+    }
+    .errors{
+      text-align: initial;
+      color: red;
+      font-size: 12px;
+      font-style: italic;
+    }
+  
+    .flipButtonBack{
+      text-align: end;
+      margin-top: 2%;
+      .backButton {
+        color: white;
+        background-color: cadetblue;
+        border: initial;
+        font-size: 16px;
+        padding: 1% 4%;
+        float: inherit;
+      }
+    }
+  }
+  
 }
 
+//For Mobile CSS
 @media only screen and (max-width: 770px) {
   .flipButtonFront{
     margin-top: 15% !important;
