@@ -3,6 +3,9 @@
 }
 
 .frontCard {
+  .row{
+    // margin: 0px;
+  }
   width: 40%;
   margin: auto;
   border: solid purple;
@@ -20,7 +23,7 @@
   }
 }
 }
-.col-md-6 {
+.col-sm-6 {
   border: solid 1px;
 } 
 .backCard {
@@ -40,25 +43,28 @@
     text-align: initial;
     color: red;
     font-size: 12px;
-    /* font-weight: bold; */
     font-style: italic;
   }
+
   .flipButtonBack{
-    float: right;
+    text-align: end;
+    margin-top: 2%;
     .backButton {
       color: white;
       background-color: cadetblue;
       border: initial;
       font-size: 16px;
-      padding: 12% 40%;
+      padding: 1% 4%;
       float: inherit;
     }
-   
   }
-
 }
 
-
-
-
-
+@media only screen and (max-width: 770px) {
+  .flipButtonFront{
+    margin-top: 15% !important;
+  }
+  .backCard .formSubmit {
+    margin: 10% 2% !important;
+  }
+}
