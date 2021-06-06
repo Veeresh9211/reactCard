@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import './App.scss';
 import ReactCardFlip from 'react-card-flip';
-import {Form, Button} from 'react-bootstrap';
+import {useFormik} from 'formik';
+
 function App() {
   const [isFlipped, setIsFlipped] = useState(false);
 
@@ -9,7 +10,17 @@ function App() {
     e.preventDefault();
     setIsFlipped(!isFlipped);
   }
-  const [formObject, setFormObject] =  useState({name: "Veeresh", company: "Test123"});
+
+ 
+  const handleBack = (e) =>{
+    e.preventDefault();
+    setIsFlipped(!isFlipped);
+  }
+
+  
+
+
+  
 
   return (
     <div className="App">
@@ -21,35 +32,48 @@ function App() {
               <label>Name:</label>
             </div>
             <div className="col-md-6">
-              {formObject.name}
+              {formik.values.name}
             </div>
             <div className="col-md-6">
               <label>Company:</label>
             </div>
             <div className="col-md-6">
-              {formObject.company}
+              {formik.values.company}
             </div>
             
           </div>
-          <button className="editButton" onClick={(e)=>handleClick(e)}>Edit</button>
+          {formik.values.name.length > 0 ?
+          <button className="editButton" onClick={(e)=>handleClick(e)}>Edit Details</button> :
+          <button className="editButton" onClick={(e)=>handleClick(e)}>Add Details</button>
+}
         </div>
 
         <div className="backCard">
-          <Form>
-            <Form.Group >
-              <Form.Label>Name</Form.Label>
-              <input placeholder="Enter Name" value={formObject.name} type="text" className="form-control"/>
-            </Form.Group>
-            <Form.Group >
-              <Form.Label>Company</Form.Label>
-              <input placeholder="Enter Company" value={formObject.company} type="text" className="form-control"/>
-            </Form.Group>
-            <Button variant="primary" type="submit">
-              Submit
-            </Button>
-          </Form>
+          <form onSubmit={formik.handleSubmit}>
+            <label htmlFor="firstName">Name</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              onChange={formik.handleChange}
+              value={formik.values.name}
+              className="form-control"
+            />
+            {formik.errors.name ? <div className="errors">{formik.errors.name}</div> : null}
+            <label htmlFor="lastName">Company</label>
+            <input
+              id="company"
+              name="company"
+              type="text"
+              onChange={formik.handleChange}
+              value={formik.values.company}
+              className="form-control"
+            />
+            {formik.errors.company ? <div className="errors">{formik.errors.company}</div> : null}
+            <button className="formSubmit" type="submit">Submit</button>
+          </form>
           <div>
-            <button className="backButton" onClick={(e)=>handleClick(e)}>Back</button>
+            <button className="backButton" onClick={(e)=>handleBack(e)}>Back</button>
           </div>
         </div>
       </ReactCardFlip>
