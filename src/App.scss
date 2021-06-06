@@ -6,57 +6,59 @@
   width: 40%;
   margin: auto;
   border: solid purple;
-  padding: 2%;
-  height: 150px;
-  // text-align: end;
+  padding: 2%;  
+  .flipButtonFront{
+    text-align: end;
+    margin-top: 2%;
+  .editButton {
+    color: white;
+    background-color: cadetblue;
+    border: initial;
+    font-size: 16px;
+    padding: 1% 4%;
+    float: inherit;
+  }
 }
+}
+.col-md-6 {
+  border: solid 1px;
+} 
 .backCard {
   width: 40%;
   margin: auto;
   border: solid purple;
   padding: 2%;
-  height: 20pc;
-}
-
-.col-md-6 {
-  border: solid 1px;
-}
-
-.editButton {
-  margin: 5px 0px !important;
-  float: right;
-  color: white;
-  background-color: cadetblue;
-  border: initial;
-  font-size: 16px;
-  padding: 1% 5%;
-  margin: 1% -2%;
-}
-
-.formSubmit{
-  color: white;
-  background-color: green;
-  border: initial;
-  font-size: 16px;
-  padding: 1% 5%;
-  margin: 1% -2%;
-}
-
-.backButton {
-  margin: 5px 0px !important;
-  color: white;
-  background-color: cadetblue;
-  border: initial;
-  font-size: 16px;
-  padding: 1% 5%;
-  margin: 1% -2%;
-  float: right;
-}
-
-.errors{
+  .formSubmit{
+    color: white;
+    background-color: green;
+    border: initial;
+    font-size: 16px;
+    padding: 1% 5%;
+    margin: 1% -2%;
+  }
+  .errors{
     text-align: initial;
     color: red;
     font-size: 12px;
     /* font-weight: bold; */
     font-style: italic;
+  }
+  .flipButtonBack{
+    float: right;
+    .backButton {
+      color: white;
+      background-color: cadetblue;
+      border: initial;
+      font-size: 16px;
+      padding: 12% 40%;
+      float: inherit;
+    }
+   
+  }
+
 }
+
+
+
+
+
