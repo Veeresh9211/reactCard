@@ -1,0 +1,45 @@
+.App {
+  text-align: center;
+}
+
+.frontCard {
+  width: 40%;
+  margin: auto;
+  border: solid purple;
+  padding: 2%;
+  height: 150px;
+  // text-align: end;
+}
+.backCard {
+  width: 40%;
+  margin: auto;
+  border: solid purple;
+  padding: 2%;
+  height: 20pc;
+}
+
+.col-md-6 {
+  border: solid 1px;
+}
+
+.editButton {
+  margin: 5px 0px !important;
+  float: right;
+  color: white;
+  background-color: cadetblue;
+  border: initial;
+  font-size: 16px;
+  padding: 1% 5%;
+  margin: 1% -2%;
+}
+
+.backButton {
+  margin: 5px 0px !important;
+  color: white;
+  background-color: cadetblue;
+  border: initial;
+  font-size: 16px;
+  padding: 1% 5%;
+  margin: 1% -2%;
+  float: right;
+}
