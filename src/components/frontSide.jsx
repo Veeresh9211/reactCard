@@ -1,8 +1,9 @@
 import React from 'react';
 
-export const FrontSide = ({formik, handleClickRef}) =>{
+export const FrontSide = ({formik, handleClickRef, showBack}) =>{
+  let showL = !showBack ? "frontCardShow" : "frontCardAni";
     return(
-        <div className="frontCard">
+        <div className={`frontCard ${showL}`}>
           <div className="row">
             <div className="col-sm-6">
               <b><label>Name:</label></b>

@@ -69,3 +69,43 @@
     margin: 10% 2% !important;
   }
 }
+
+
+
+.container {
+  position: relative;
+  .frontCard,
+  .backCard {
+    position: absolute;
+    left: 30%;
+  }
+  .frontCard{
+    visibility: hidden;
+    transition: transform ease-out 0.3s;
+  }
+  
+  .frontCardAni{
+    transform: rotateY(180deg);
+  }
+  
+  .frontCardShow{
+    visibility: visible;
+    transform: rotateY(0deg);
+  }
+
+  .backCard{
+    visibility: hidden;
+    transition: transform ease-out 0.3s;
+  }
+  
+  .backCardAni{
+    transform: rotateY(180deg);
+  }
+  
+  .backCardShow{
+    visibility: visible;
+    transform: rotateY(0deg);
+  }
+  
+}
+

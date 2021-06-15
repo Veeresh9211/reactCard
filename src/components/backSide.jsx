@@ -1,8 +1,9 @@
 import React from 'react';
 
-export const BackSide = ({formik, handleBackRef}) =>{
+export const BackSide = ({formik, handleBackRef, showBack}) =>{
+    let showL = showBack ? "backCardShow" : "backCardAni";
     return(
-        <div className="backCard">
+        <div className={`backCard ${showL}`}>
           <form onSubmit={formik.handleSubmit}>
             <label htmlFor="firstName">Name</label>
             <input

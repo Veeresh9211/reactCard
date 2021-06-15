@@ -6,18 +6,18 @@ import { FrontSide } from './components/frontSide';
 import { BackSide } from './components/backSide';
 
 function App() {
-  const [isFlipped, setIsFlipped] = useState(false);
   const [formData, setFormData] = useState({});
+  const [showBack, setShowBack] = useState(false);
   
   const handleClick = (e) =>{
     e.preventDefault();
-    setIsFlipped(!isFlipped);
+    setShowBack(!showBack);
   }
 
  
   const handleBack = (e) =>{
     e.preventDefault();
-    setIsFlipped(!isFlipped);
+    setShowBack(!showBack);
   }
 
   const validate = values => {
@@ -54,10 +54,10 @@ function App() {
   return (
     <div className="App">
      <h4>React Card Animation Example</h4>
-     <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
-        <FrontSide formik={formik} handleClickRef={handleClick}/>
-        <BackSide formik={formik} handleBackRef={handleBack}/>
-      </ReactCardFlip>
+        <div className="container">
+          <FrontSide showBack = {showBack} formik={formik} handleClickRef={handleClick}/>
+          <BackSide showBack = {showBack} formik={formik} handleBackRef={handleBack}/>
+        </div>
     </div>
   );
 }
